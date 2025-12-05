@@ -1,0 +1,308 @@
+*{
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Navbar */
+
+.Dinner-navbar{
+    box-shadow: 1px 1px 15px gray;
+}
+
+.navImg{
+    width: 55px;
+    height: 55px;
+    background-image: linear-gradient(90deg,#ff6900, #fb2c36);
+
+box-shadow: 0px 1px 10px gray;
+}
+
+.nav-icon-txt p{
+    font-size: 16px;
+    color: #6a7282;
+}
+
+.nav-item a i{
+    color: #4a5565;
+}
+
+/* nav item hover */
+
+.nav-item:hover a{
+
+color: #f54a00;
+}
+
+.profile-img{
+    width: 60px;
+    height: 60px;
+}
+
+.profile-img img{
+    padding: 1px ;
+    background-color: #fb2c36;
+}
+
+/* Meals Section */
+main{
+    background-color: #fefce8;
+}
+#meal-recipes{
+    background-color: #fff;
+    border: 1px solid #ffedd4;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+/* Left Side */
+
+.meal-img img{
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.meal-review{
+    top: 15px;
+    background-color: #fff;
+}
+
+.meal-review span{
+    color: #6a7282;
+    font-size: 14px;
+}
+
+.meal-review i{
+    color: #fdc700;
+}
+
+/* bottom Icons section */
+
+.meal-info{
+    bottom: 20px;
+    left: 7%;
+    background-color: #fff;
+}
+
+.meal-info p{
+    font-size: 14px;
+    color: #6a7282;
+}
+
+.prep-time i{
+    color: #ff6900;
+}
+
+.cook-time i{
+    color: #fb2c36;
+}
+
+.serving i{
+    color: #2b7fff;
+}
+
+/* Right Side */
+
+.meal-icons {
+    font-size: 13px ;
+    font-weight: 500;
+}
+
+.meal-icons span:first-child{
+    color: #008236;
+    background-color: #dcfce7;
+}
+
+.meal-icons span:last-child{
+    color:#1447e6 ;
+    background-color: #dbeafe;
+}
+
+.meal-name-txt p{
+    color: #4a5565;
+}
+
+.meal-name-icons span{
+    background-color: #ffedd4;
+    color: #f54a00;
+    cursor: pointer;
+}
+
+/* Recipe Nav Section */
+
+
+.meals-nav-recipe{
+    color: #6a7282;
+    
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #f54a00;
+    border: none;
+    border-bottom: 2px solid #f54a00;
+    border-color: #f54a00;
+}
+
+
+
+.nav-tabs #ingred-tab::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: #f54a00;
+    width: 20%;
+    height: 1.5px;
+    display: none;
+
+}
+.meals-nav-recipe:hover{
+color: #364153;
+}
+
+
+.meals-nav-recipe:focus-within{
+    color: #f54a00;
+}
+
+
+.meals-nav-recipe:hover, .meals-nav-recipe:active, .meals-nav-recipe:focus-within{
+    border: none;
+    
+}
+
+/* ingredients */
+
+.ingred-list{
+    font-size: 16px;
+    color: #364153;
+    background-color: #fff7ed;
+}
+
+.ingred-list .num{
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    background-color: #ff6900;
+}
+
+/* Instructions */
+
+.instruc-list {
+        font-size: 18px;
+    color: #364153;
+}
+
+.instruc-list .num-instruc{
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    background-color: #ff6900;
+
+}
+
+/* Nutration */
+
+.nutrition{
+    padding: .9rem .5rem;
+    background-color: #fbf9fa;
+}
+
+.nutrition h5{
+    color: #4a5565;
+}
+
+.calories div, .protein div, .carbs div,
+.fat div, .fiber div, .sodium div{
+    width: 40px;
+    height: 40px;
+}
+
+/* Calories */
+
+.calories div{
+    color: #f54a00;
+    background-color: #ffedd4;
+}
+
+/* Protein */
+
+.protein div{
+    background-color: #dbeafe;
+    color: #155dfc;
+}
+
+/* Carbs */
+
+.carbs div{
+    background-color: #fef9c2;
+    color: #d08700;
+}
+
+/* Fats */
+
+.fat div{
+    background-color:#ffe2e2 ;
+    color: #e7000b;
+}
+
+/* Fibers */
+
+.fiber div{
+    background-color: #dcfce7;
+    color: #00a63e;
+}
+
+/* Sodium */
+
+.sodium div{
+    background-color:#fce7f3 ;
+    color: #e60076;
+}
+
+/* Chefs Tips */
+
+.Tips-list{
+    color: #364153;
+
+}
+
+.Tips-list li{
+    background-color: #fffbeb;
+    border-radius: .8rem;
+
+    border-left: .3rem solid #ffb900;
+    -webkit-border-radius: .8rem;
+    -moz-border-radius: .8rem;
+    -ms-border-radius: .8rem;
+    -o-border-radius: .8rem;
+}
+
+.Tips-list div{
+    width: 25px;
+    height: 25px;
+    background-color: #ff6900;
+}
+
+/* choosing button section */
+
+.trying-button button{
+    transition: scale 0.3s ease;
+    color: #fff;
+    background-image: linear-gradient(90deg, #ff6900 , #fb2c36) ;
+    -webkit-transition: scale 0.3s ease;
+    -moz-transition: scale 0.3s ease;
+    -ms-transition: scale 0.3s ease;
+    -o-transition: scale 0.3s ease;
+}
+.trying-button:hover button{
+    background-image: linear-gradient(90deg, #f54a00 , #e7000b
+);
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}

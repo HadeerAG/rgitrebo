@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/all.css">
+    <link rel="stylesheet" href="./Css/bootstrap.css">
+    <link rel="stylesheet" href="./Css/Style.css">
+    <link rel="icon" href="./Images/favicon (1).png">
+    <title>What's For Dinner</title>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+
+    <nav class="Dinner-navbar navbar navbar-expand-lg p-1">
+  <div class="container-fluid mx-2">
+    <div class="navbar-brand d-flex align-items-center" href="#">
+      <div class="navImg rounded-circle mx-3 p-3 d-flex align-items-center justify-content-center">
+        <i class="fa-solid fa-utensils fs-5 text-white rounded-circle"></i>
+      </div>
+      <div class="nav-icon-txt mt-2">
+        <h4 class="fw-bolder fs-3 p-0 m-0">What's For Dinner</h4>
+        <p class="p-0">Your daily meal inspiration</p>
+
+      </div>
+      
+      </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-end align-items-end mx-2" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-2 mb-2 mb-lg-0 d-flex justify-content-end align-items-center">
+        <li class="nav-item ">
+          <a class="nav-link fs-5 position-relative" aria-current="page" href="#">
+            <i class="fa-solid fa-bookmark"></i>
+          </a>
+        </li>
+        
+        <li class="nav-item fs-5 mx-1">
+          <a class="nav-link position-relative" href="#">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </a>
+        </li>
+
+        <li class="nav-item fs-5 mx-1">
+          <a class="nav-link position-relative" href="#">
+            <i class="fa-solid fa-gear"></i>
+          </a>
+        </li>
+
+        <li class="nav-item fs-5 mx-1">
+          <a class="nav-link position-relative profile-img" href="#">
+            <img class="w-100 rounded-circle " src="./Images/avatar-2.jpg" alt="">
+          </a>
+        </li>
+
+        
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<!-- Meals Section -->
+
+<main class="py-5 px-3">
+  <section id="meal-recipes" class=" ">
+    <div class="container-fluid ">
+      <div class="row ">
+
+       <!-- Left Side -->
+
+        <div class="col-lg-5 col-md-12 position-relative p-0">
+          <div class="meal-img ">
+            <img class="w-100" src="./Images/Caprese-Sandwich.jpeg" alt="">
+
+          </div>
+
+          <div class="meal-review d-flex align-items-center justify-content-center position-absolute rounded-4 mx-3 px-2">
+            <i class="fa-solid fa-star fs-6 mx-1 "></i>
+            <h5 class="mx-1 pt-2 fs-6">4.7</h5>
+            <span class="py-1">(267 reviews)</span>
+          </div>
+                       
+           
+          <div class="meal-info py-2 d-flex justify-content-between align-items-center position-absolute rounded-4 ">
+
+            <div class="prep-time text-center mx-5">
+              <i class="fa-solid fa-clock fs-4 my-2"></i>
+              <p class="text-center">Prep Time</p>
+              <h4></h4>
+            </div>
+
+            <div class="cook-time text-center mx-5">
+              <i class="fa-solid fa-fire-burner fs-4 my-2"></i>
+              <p>Cook Time</p>
+              <h4></h4>
+            </div>
+
+            <div class="serving  text-center mx-5">
+              <i class="fa-solid fa-users fs-4 my-2"></i>
+              <p>Servings</p>
+              <h4></h4>
+            </div>
+
+          </div>
+                   
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="col-lg-7 col-md-12 p-4">
+
+          <div class="meal-icons d-flex py-3">
+            <span class="mx-3 px-2 rounded-2 d-flex align-items-center justify-content-center">Easy</span>
+            <span class="mx-3 px-2 rounded-2 d-flex align-items-center justify-content-center">Italian</span>
+          </div>
+
+          <div class="meal-name d-flex justify-content-around ">
+            <div class="meal-name-txt">
+              <h3 class="fs-1">Caprese Sandwich</h3>
+              <p>A fresh Italian sandwich made with mozzarella, tomatoes, basil, and pesto.</p>
+
+            </div>
+            
+            <div class="meal-name-icons align-self-center">
+                <span class="p-3 mx-2 rounded-3"><i class="fa-solid fa-bookmark fs-6"></i></span>
+              
+              <span class="p-3 mx-1 rounded-3"> <i class="fa-solid fa-share-nodes fs-6"></i></span>
+
+            </div>
+            
+
+          </div>
+
+          <div class="meal-notes">
+            <div class="alert-icon">
+
+            </div>
+
+            <div class="notes-txt">
+
+            </div>
+          </div>
+
+          <!-- recipies section -->
+
+   <ul class="nav nav-tabs nav-tabs-meals my-4 mx-3 position-relative" id="myTab" role="tablist">
+  <li class="nav-item pb-2" role="presentation">
+    <button class="nav-link active meals-nav-recipe fw-semibold" id="ingred-tab" data-bs-toggle="tab" data-bs-target="#ingred-tab-pane" type="button" role="tab" aria-controls="ingred-tab-pane" aria-selected="true">
+     <i class="fa-solid fa-list-check"></i>
+     <span> Ingredients</span>
+    </button>
+  </li>
+  <li class="nav-item pb-2" role="presentation">
+    <button class="nav-link meals-nav-recipe fw-semibold" id="instruc-tab" data-bs-toggle="tab" data-bs-target="#instruc-tab-pane" type="button" role="tab" aria-controls="instruc-tab-pane" aria-selected="false">
+     <i class="fa-solid fa-book-open"></i>
+     Instructions
+
+    </button>
+  </li>
+  <li class="nav-item pb-2" role="presentation">
+    <button class="nav-link meals-nav-recipe fw-semibold" id="Nutri-tab" data-bs-toggle="tab" data-bs-target="#Nutri-tab-pane" type="button" role="tab" aria-controls="Nutri-tab-pane" aria-selected="false">
+      <i class="fa-solid fa-chart-pie"></i>
+      Nutrition
+    </button>
+  </li>
+  <li class="nav-item pb-2" role="presentation">
+    <button class="nav-link meals-nav-recipe fw-semibold" id="chef-tab" data-bs-toggle="tab" data-bs-target="#chef-tab-pane" type="button" role="tab" aria-controls="chef-tab-pane" aria-selected="false">
+      <i class="fa-solid fa-lightbulb"></i>
+      Chef's Tips
+    </button>
+  </li>
+  
+</ul>
+<div class="tab-content mx-1" id="myTabContent">
+  <div class="tab-pane fade show active" id="ingred-tab-pane" role="tabpanel" aria-labelledby="ingred-tab" tabindex="0">
+    <ul class="list-unstyled ingred-list p-3 rounded-3">
+      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">1</div>
+         1 ciabatta bread</li>
+      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">2</div>
+        200g fresh mozzarella, sliced</li>
+      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">3</div>
+        2 large tomatoes, sliced</li>
+      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">4</div>
+        Fresh basil leaves</li>
+      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">5</div>
+        3 tablespoons pestoi</li>
+      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">6</div>
+        2 tablespoons balsamic glaze</li>
+      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">7</div>
+        Olive oil</li>
+      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">8</div>
+        Salt and pepper</li>
+
+    </ul>
+  </div>
+  <div class="tab-pane fade" id="instruc-tab-pane" role="tabpanel" aria-labelledby="instruc-tab" tabindex="0">
+    <ul class="instruc-list mb-4">
+      <li class="d-flex align-items-center  my-2"><div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">1</div> Slice the ciabatta bread in half.</li>
+      <li class="d-flex align-items-center  my-2"><div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">2</div>Spread pesto on both sides.</li>
+      <li class="d-flex align-items-center  my-2"> <div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">3</div>Layer tomatoes, mozzarella, and basil.</li>
+      <li class="d-flex align-items-center my-2"><div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">4</div> Drizzle with olive oil and balsamic glaze.</li>
+      <li class="d-flex align-items-center my-2"><div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">5</div> Season with salt and pepper.</li>
+      <li class="d-flex align-items-center my-2"><div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">6</div> Close the sandwich and serve.</li>
+
+    </ul>
+
+  </div>
+  <div class="tab-pane fade" id="Nutri-tab-pane" role="tabpanel" aria-labelledby="Nutri-tab" tabindex="0">
+    <div class="container">
+      <div class="row g-3 mx-0 mb-5 w-100 justify-content-between">
+        <div class="col-6 rounded-4 d-flex align-items-center justify-content-between nutrition">
+          <div class="calories d-flex align-items-center">
+          <div class="mx-3 rounded-3 d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <h5>Calories</h5>
+
+          </div>
+
+          <h4>520 kcal</h4>
+
+        </div>
+        <div class="col-5 rounded-4 d-flex align-items-center justify-content-between nutrition">
+          <div class="protein d-flex align-items-center">
+          <div class="mx-3 rounded-3 d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <h5>Protein</h5>
+
+          </div>
+
+          <h4>20g</h4>
+
+        </div>
+        <div class="col-6 rounded-4 d-flex align-items-center justify-content-between nutrition">
+          <div class="carbs d-flex align-items-center">
+          <div class="mx-3 rounded-3 d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-wheat-awn"></i>
+          </div>
+          <h5>Carbs</h5>
+
+          </div>
+
+          <h4>40g</h4>
+
+        </div>
+        <div class="col-5 rounded-4 d-flex align-items-center justify-content-between nutrition">
+          <div class="fat d-flex align-items-center">
+          <div class="mx-3 rounded-3 d-flex align-items-center justify-content-center">
+           <i class="fa-solid fa-droplet"></i>
+          </div>
+          <h5>Fat</h5>
+
+          </div>
+
+          <h4>22g</h4>
+
+        </div>
+        <div class="col-6 rounded-4 d-flex align-items-center justify-content-between nutrition">
+          <div class="fiber d-flex align-items-center">
+          <div class="mx-3 rounded-3 d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h5>Fiber</h5>
+
+          </div>
+
+          <h4>3g</h4>
+
+        </div>
+        <div class="col-5 rounded-4 d-flex align-items-center justify-content-between nutrition">
+          <div class="sodium d-flex align-items-center">
+          <div class="mx-3 rounded-3 d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-cube"></i>
+          </div>
+          <h5>Sodium</h5>
+
+          </div>
+
+          <h4>400mg</h4>
+
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="chef-tab-pane" role="tabpanel" aria-labelledby="chef-tab" tabindex="0">
+    <ul class="Tips-list mb-5">
+      <li class="d-flex align-items-center my-2 p-3"><div class="fs-6 rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center text-white check">✔</div>
+        Use fresh mozzarella for the best texture.</li>
+        <li class="d-flex align-items-center my-2 p-3"><div class="fs-6 rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center text-white check">✔</div>
+          Toast the bread lightly if you prefer more crunch.</li>
+    </ul>
+  </div>
+  
+</div>
+
+<!-- choosing button section -->
+
+<div class="trying-button mx-3">
+  <button onclick="display()" class="btn d-flex rounded-3 fs-5 py-2 px-4 text-white fs-6">   
+      <i class="fa-solid fa-rotate fs-6 mx-1"></i>
+      Try Another Recipe
+
+  </button>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+    
+<script src="./JS/main.js"></script>
+<script src="./JS/bootstrap.bundle.js"></script>
+</body>
+</html>
