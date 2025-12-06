@@ -643,6 +643,10 @@ var Recipe = JSON.parse(localStorage.getItem("allRecipes"))
 
 
 
+
+
+
+
 var oldValue;
 
 function display(){
@@ -655,6 +659,35 @@ while(randomIndex == oldValue){
 oldValue == randomIndex
 
 var randomRecipe = Recipe[randomIndex];
+
+var ingredList = ""
+var instrucList =""
+var tipList = ""
+
+for (var i=0; i<randomRecipe.ingredients.length; i++){
+  ingredList += `
+  <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">${i+1}</div>
+         ${randomRecipe.ingredients[i]}</li>
+  `;
+}
+
+for (var j=0; j< randomRecipe.instructions.length; j++){
+
+  instrucList +=`
+  <li class="d-flex align-items-center  my-2">
+      <div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">${j+1}</div> 
+      ${randomRecipe.instructions[j]}</li>
+  `
+}
+
+for (var n=0; n<randomRecipe.tips.length; n++){
+
+  tipList += `
+   
+<li class="d-flex align-items-center my-2 p-3"><div class="fs-6 rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center text-white check">✔</div>
+        ${randomRecipe.tips[n]}</li>
+  `
+}
 
 
 document.getElementById("meal-recipes").innerHTML =`
@@ -772,85 +805,14 @@ document.getElementById("meal-recipes").innerHTML =`
   <div class="tab-pane fade show active" id="ingred-tab-pane" role="tabpanel" aria-labelledby="ingred-tab" tabindex="0">
     <ul class="list-unstyled ingred-list p-3 rounded-3">
     
-      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">1</div>
-         ${randomRecipe.ingredients[0]}</li>
-      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">2</div>
-        ${randomRecipe.ingredients[1]}</li>
-      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">3</div>
-        ${randomRecipe.ingredients[2]}</li>
-      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">4</div>
-        ${randomRecipe.ingredients[3]}</li>
-      <li class="d-flex align-items-center fs-6 my-2"><div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">5</div>
-        ${randomRecipe.ingredients[4]}</li>
+      ${ingredList}
       
-         ${randomRecipe.ingredients[5] ? `
-<li class="d-flex align-items-center fs-6 my-2">
-  <div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">6</div>
-  ${randomRecipe.ingredients[5]}
-</li>
-` : ''}
-         ${randomRecipe.ingredients[6] ? `
-<li class="d-flex align-items-center fs-6 my-2">
-  <div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">7</div>
-  ${randomRecipe.ingredients[6]}
-</li>
-` : ''}
-
-      ${randomRecipe.ingredients[7] ? `
-<li class="d-flex align-items-center fs-6 my-2">
-  <div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">8</div>
-  ${randomRecipe.ingredients[7]}
-</li>
-` : ''}
-
-${randomRecipe.ingredients[8] ? `
-<li class="d-flex align-items-center fs-6 my-2">
-  <div class="rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">9</div>
-  ${randomRecipe.ingredients[8]}
-</li>
-` : ''}
-
     </ul>
   </div>
   <div class="tab-pane fade" id="instruc-tab-pane" role="tabpanel" aria-labelledby="instruc-tab" tabindex="0">
     <ul class="instruc-list mb-4">
-      <li class="d-flex align-items-center  my-2">
-      <div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">1</div> 
-      ${randomRecipe.instructions[0]}</li>
-      <li class="d-flex align-items-center  my-2">
-      <div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">2</div>
-      ${randomRecipe.instructions[1]} </li>
-      <li class="d-flex align-items-center  my-2"> 
-      <div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">3</div>
-       ${randomRecipe.instructions[2]}</li>
-       ${randomRecipe.instructions[3] ? `
-<li class="d-flex align-items-center  my-2">
-  <div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">4</div>
-  ${randomRecipe.instructions[3]}
-</li>
-` : ''}
-
-${randomRecipe.instructions[4] ? `
-<li class="d-flex align-items-center  my-2">
-  <div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">5</div>
-  ${randomRecipe.instructions[4]}
-</li>
-` : ''}
       
-${randomRecipe.instructions[5] ? `
-<li class="d-flex align-items-center  my-2">
-  <div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">6</div>
-  ${randomRecipe.instructions[5]}
-</li>
-` : ''}
-
-${randomRecipe.instructions[6] ? `
-<li class="d-flex align-items-center  my-2">
-  <div class="num-instruc fs-5 rounded-2 me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center num">7</div>
-  ${randomRecipe.instructions[6]}
-</li>
-` : ''}
-     
+      ${instrucList}
 
     </ul>
 
@@ -936,16 +898,8 @@ ${randomRecipe.instructions[6] ? `
   </div>
   <div class="tab-pane fade" id="chef-tab-pane" role="tabpanel" aria-labelledby="chef-tab" tabindex="0">
     <ul class="Tips-list mb-5">
-      <li class="d-flex align-items-center my-2 p-3"><div class="fs-6 rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center text-white check">✔</div>
-        ${randomRecipe.tips[0]}</li>
-        <li class="d-flex align-items-center my-2 p-3"><div class="fs-6 rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center text-white check">✔</div>
-          ${randomRecipe.tips[1]}</li>
-          ${randomRecipe.tips[2] ? `<li class="d-flex align-items-center my-2 p-3"><div class="fs-6 rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center text-white check">✔</div>
-          ${randomRecipe.tips[2]} </li> ` : ''}
-          ${randomRecipe.tips[3] ? `<li class="d-flex align-items-center my-2 p-3"><div class="fs-6 rounded-circle me-3 ms-1 p-2 fw-semibold d-flex justify-content-center align-items-center text-white check">✔</div>
-          ${randomRecipe.tips[3]} </li> ` : ''}
-
-
+      
+      ${tipList}
     </ul>
   </div>
   
